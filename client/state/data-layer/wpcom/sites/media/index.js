@@ -10,7 +10,6 @@ import {
 	failMediaRequest,
 	failMediaItemRequest,
 	receiveMedia,
-	requestingMedia,
 	requestingMediaItem,
 	successMediaRequest,
 	successMediaItemRequest,
@@ -27,7 +26,6 @@ export function requestMedia( action ) {
 	log( 'Request media for site %d using query %o', action.siteId, action.query );
 
 	return [
-		requestingMedia( action.siteId, action.query ),
 		http(
 			{
 				method: 'GET',
