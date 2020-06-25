@@ -427,7 +427,7 @@ const LoadingCopy = styled.p`
 
 		::before {
 			right: -26px;
-			left: 0;
+			left: auto;
 		}
 	}
 `;
