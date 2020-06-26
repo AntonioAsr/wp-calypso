@@ -31,6 +31,7 @@ export type WPCOMTransactionEndpointPaymentDetails = {
 	paymentPartner: string;
 	storedDetailsId?: string;
 	name: string;
+	email?: string;
 	zip: string;
 	postalCode: string;
 	country: string;
@@ -143,6 +144,7 @@ export function createTransactionEndpointRequestPayloadFromLineItems( {
 	paymentPartnerProcessorId,
 	storedDetailsId,
 	name,
+	email,
 	cancelUrl,
 	successUrl,
 	idealBank,
@@ -159,6 +161,7 @@ export function createTransactionEndpointRequestPayloadFromLineItems( {
 	paymentPartnerProcessorId: string;
 	storedDetailsId?: string;
 	name: string;
+	email?: string;
 	successUrl?: string;
 	cancelUrl?: string;
 	idealBank?: string;
@@ -182,6 +185,7 @@ export function createTransactionEndpointRequestPayloadFromLineItems( {
 			paymentPartner: paymentPartnerProcessorId,
 			storedDetailsId,
 			name,
+			email,
 			country,
 			postalCode,
 			zip: postalCode, // TODO: do we need this in addition to postalCode?
